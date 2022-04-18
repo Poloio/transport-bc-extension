@@ -1,0 +1,29 @@
+{
+  "id": "87a6891c-1568-4cf6-80e8-c65a6dffc78f",
+  "name": "Extended Logistics",
+  "publisher": "VS Sistemas",
+  "version": "1.0.0.0",
+  "brief": "Extend logistics management and sales.",
+  "description": "Enables a transportation company to hold and manage data about routes, drivers and vehicles. Along with some extensions to core tables to improve integration.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "extension-icon.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "19.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "runtime": "8.0"
+}
