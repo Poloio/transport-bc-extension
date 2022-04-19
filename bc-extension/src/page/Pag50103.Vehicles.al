@@ -1,8 +1,9 @@
 page 50103 Vehicles
 {
     ApplicationArea = All;
-    Caption = 'Vehicles';
+    Caption = 'Vehículos';
     PageType = List;
+    CardPageId = "Vehicle card";
     SourceTable = Vehicle;
     UsageCategory = Lists;
 
@@ -14,7 +15,7 @@ page 50103 Vehicles
             {
                 field("Plate Code"; Rec."Plate Code")
                 {
-                    ToolTip = 'Specifies the value of the Matrícula field.';
+                    ToolTipML = ENG = 'Specifies the value of the Matrícula field.', ESP = 'Especifica la matrícula del vehículo.';
                     ApplicationArea = All;
                 }
                 field("License Type"; Rec."License Type")

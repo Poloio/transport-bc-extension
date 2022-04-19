@@ -7,7 +7,12 @@ pageextension 50100 DriverPageInfo extends "Employee Card"
             field("NIF/License"; Rec."NIF/License")
             {
                 ApplicationArea = All;
-                Caption = 'DNI/Permiso de conducir';
+                Caption = 'DNI/Perm. conducir';
+            }
+
+            field("License type"; Rec."License type")
+            {
+                ApplicationArea = All;
             }
         }
     }

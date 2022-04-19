@@ -1,6 +1,6 @@
 table 50103 Vehicle
 {
-    Caption = 'Vehicle';
+    Caption = 'Vehículo';
     DataClassification = ToBeClassified;
 
     fields
@@ -33,5 +33,10 @@ table 50103 Vehicle
         {
             Clustered = true;
         }
+    }
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Plate code", Model, "License Type", "Max. Palets Count")
+        { }
     }
 }

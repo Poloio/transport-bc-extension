@@ -1,6 +1,6 @@
 table 50105 Route
 {
-    Caption = 'Route';
+    Caption = 'Ruta de envío';
     DataClassification = ToBeClassified;
 
     fields
@@ -14,7 +14,7 @@ table 50105 Route
         field(2; "Driver Employee Code"; Code[10])
         {
             Caption = 'Cod. Conductor';
-            TableRelation = Employee;
+            TableRelation = Employee WHERE("License Type" = field("Needed Lic."));
             DataClassification = ToBeClassified;
         }
         field(3; "Vehicle Code"; Code[7])
@@ -22,7 +22,19 @@ table 50105 Route
             Caption = 'Cod. Vehículo';
             TableRelation = Vehicle;
             DataClassification = ToBeClassified;
+            trigger OnValidate()
+            begin
+                CalcFields("Needed Lic.");
+            end;
         }
+
+        field(9; "Needed Lic."; Code[5])
+        {
+            Caption = 'Perm. Necesario';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Vehicle."License Type" where("Plate Code" = field("Vehicle Code")));
+        }
+
         field(4; "Pick-up Province"; Code[3])
         {
             Caption = 'Provincia de origen';
@@ -51,7 +63,7 @@ table 50105 Route
 
         field(8; Distance; Integer)
         {
-            Caption = 'Distance';
+            Caption = 'Distancia (Km)';
             DataClassification = ToBeClassified;
         }
     }
