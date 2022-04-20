@@ -16,6 +16,10 @@ page 50107 "Route card"
                     ToolTip = 'Specifies the value of the Número field.';
                     ApplicationArea = All;
                 }
+                field("Delivery Note Code"; Rec."Delivery Note Code")
+                {
+                    ApplicationArea = All;
+                }
                 field("Driver Employee Code"; Rec."Driver Employee Code")
                 {
                     ToolTip = 'Specifies the value of the Cod. Conductor field.';
@@ -46,7 +50,6 @@ page 50107 "Route card"
 
             group(Direcciones)
             {
-
                 field("Pick-up Province"; Rec."Pick-up Province")
                 {
                     ToolTip = 'Specifies the value of the Provincia de origen field.';
@@ -70,6 +73,25 @@ page 50107 "Route card"
                 field(Distance; Rec.Distance)
                 {
                     ToolTip = 'Specifies the value of the Distance field.';
+                    ApplicationArea = All;
+                }
+            }
+            group(Transporte)
+            {
+                field("Departure Time"; Rec."Departure Time")
+                {
+                    ApplicationArea = All;
+                }
+                field("Delivery Time"; Rec."Delivery Time")
+                {
+                    ApplicationArea = All;
+                }
+                field("Return Time"; Rec."Return Time")
+                {
+                    ApplicationArea = All;
+                }
+                field("Fuel Cost"; Rec."Fuel Cost")
+                {
                     ApplicationArea = All;
                 }
             }

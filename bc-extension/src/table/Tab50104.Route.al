@@ -11,6 +11,12 @@ table 50105 Route
             AutoIncrement = true;
             DataClassification = ToBeClassified;
         }
+        field(10; "Order Code"; Code[20])
+        {
+            Caption = 'Cod. Ped. Venta';
+            TableRelation = "Sales Header";
+            DataClassification = ToBeClassified;
+        }
         field(2; "Driver Employee Code"; Code[10])
         {
             Caption = 'Cod. Conductor';
@@ -64,6 +70,32 @@ table 50105 Route
         field(8; Distance; Integer)
         {
             Caption = 'Distancia (Km)';
+            DataClassification = ToBeClassified;
+        }
+        field(11; "Departure Time"; DateTime)
+        {
+            Caption = 'Fecha/hora salida';
+            DataClassification = ToBeClassified;
+        }
+        field(14; "Delivery Note Code"; Code[20])
+        {
+            Caption = 'Cod. Albarán';
+            TableRelation = "Sales Shipment Header";
+            DataClassification = ToBeClassified;
+        }
+        field(12; "Delivery Time"; DateTime)
+        {
+            Caption = 'Fecha/hora entrega';
+            DataClassification = ToBeClassified;
+        }
+        field(13; "Return Time"; DateTime)
+        {
+            Caption = 'Fecha/hora llegada';
+            DataClassification = ToBeClassified;
+        }
+        field(15; "Fuel Cost"; Decimal)
+        {
+            Caption = 'Coste carburante';
             DataClassification = ToBeClassified;
         }
     }
