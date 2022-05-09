@@ -22,9 +22,11 @@ codeunit 50101 "Item Crud"
     end;
 
 
+
     [ServiceEnabled]
     procedure CreateFromString(itemJson: Text)
     // TODO Needs a proper formatted string passed as a json value -> {"value": "{ \"property\": \"value\"}
+    // Doesn't work right now
     var
         jItem: JsonObject;
         newItem: Record Item;
